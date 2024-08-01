@@ -18,7 +18,7 @@ interface Props {
   type: 'select' | 'input' | 'date'; // 表格列的输入类型，可以是选择框、输入框或者日期选择器
   label: string; // 表格列的标签
   property: string; // 表格列的属性名
-  render?: string; // 可选的自定义渲染方式，可以是组件名或者插槽名
+  render?: 'component' | 'slot'; // 可选的自定义渲染方式， 不传则按员el-table的方式渲染
   options?: Array<Option> | Function; // 选择项数据源，可以是选项数组或者一个返回选项数组的函数
   row: any; // 当前行的数据对象
   modelValue: any; // 当前列的绑定值
@@ -37,7 +37,6 @@ interface Props {
     min?: number; // 最小值限制
   } | undefined;
   readonly?: boolean; // 是否强制只读
-  errorList?: Array<string>; // 错误信息列表，用于校验错误提示
 }
 
 const props = defineProps<Props>();
