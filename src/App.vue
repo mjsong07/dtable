@@ -116,7 +116,7 @@ let data = [
   tableData.value.unshift(row)
 }
 const handleRowSubmit = (row:any) => { 
-  let {isValidate,errorMsg,errorColList} = tableRef.value?.validate(row,row.ignoreList)
+  let {isValidate,errorMsg,errorColList} = tableRef.value?.validate(row)
   if(!isValidate){
     row.errorList = errorColList 
     const warnMessage = errorMsg.join('<br/>') 

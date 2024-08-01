@@ -55,7 +55,7 @@ const emits = defineEmits(['onRowChange']);
 const props = defineProps<Props>();
 //校验当前行
 const validate = (row:any) => { 
-  const isIgnore = (val:string) => row.ignore && row.ignore.includes(val)
+  const isIgnore = (val:string) => row.ignoreList && row.ignoreList.includes(val)
   const isEmpty = (val:any) =>  val === '' || val == null
   const isSmallZero = (val:any) =>  val  < 0
   const isNumberInput = (col:any) => (col.attr || {}).type === 'number'; 
