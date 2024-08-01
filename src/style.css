@@ -1,0 +1,29 @@
+:root { 
+}
+  
+#app {
+  
+}
+ 
+h1 {
+  font-size:20px;
+  text-align: center;
+}
+
+.el-date-editor.el-input, .el-date-editor.el-input__wrapper {
+  width: 100% !important;
+}
+.el-table thead .cell span.validateTips {
+  color: red;
+  padding-right: 5px;
+}
+
+.isError {
+  .el-select__wrapper{
+      box-shadow: 0 0 0 1px var(--el-color-danger) inset !important;
+  }
+  .el-input__wrapper 
+  {
+      box-shadow: 0 0 0 1px var(--el-color-danger) inset !important;
+  }
+}
